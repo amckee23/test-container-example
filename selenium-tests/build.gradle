@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = 'uk.co.amckee'
+
+jar {
+    baseName = 'selenium-tests'
+    version = '1.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile("junit:junit:4.12")
+    testCompile("org.testcontainers:selenium:0.9.9")
+    testCompile("org.seleniumhq.selenium:selenium-remote-driver:2.45.0")
+    testCompile("org.slf4j:slf4j-simple:1.6.2")
+}
